@@ -1,5 +1,5 @@
 Welcome to Clicker Game!
-An addictive and engaging game built with Angular.
+Пункт 1 An addictive and engaging game built with Angular.
 Test your clicking skills and strive for high scores.
 Gameplay:
 
