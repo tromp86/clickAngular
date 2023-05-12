@@ -1,0 +1,249 @@
+.body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding-top: 5px;
+  user-select: none;
+}
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+input[type="checkbox"]:checked + label {
+  font-weight: bold;
+}
+input {
+  display: none;
+}
+div {
+  width: 100px;
+  height: 100px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container-blur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blur {
+  filter: blur(5px);
+  pointer-events: none;
+  transition: filter 3s ease-in-out;
+}
+.containerButonNot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: none;
+  width: 250px;
+}
+.isredsoska {
+  width: 50%;
+  background-color: rgb(0, 109, 182);
+  z-index: 1;
+  color: aliceblue;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+h5 {
+  position: absolute;
+  top: 0;
+}
+.divops {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  font-size: 20px;
+  background-color: #2a2a2a;
+  color: rgb(58, 58, 58);
+  align-items: center;
+  border-radius: 5px;
+  padding: 3px;
+  box-shadow: 10px 10px 10px #bebebe, -20px -20px 30px #ffffff;
+}
+.container-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/* _button */
+button {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #282828;
+  background: #cdcdcd;
+  box-shadow: 3px 3px #2a2a2a;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+.progress-bar-container {
+  width: 200px;
+  height: 20px;
+  border: 1px solid #000;
+  overflow: hidden;
+  background-color: rgb(1, 141, 255);
+  border: none;
+  width: 800px;
+  height: 30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+
+.progress-bar {
+  background-color: rgb(255, 0, 225);
+  transition: width 0.1s;
+}
+
+.progress-bar.full {
+  background-color: red;
+}
+.disabled-button {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+  color: #b0b0b0;
+}
+
+/* card */
+.card {
+  width: 690px;
+  height: 254px;
+  background: #07182ea1;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card h1,
+h5,
+h4 {
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+}
+p {
+  z-index: 1;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  margin: 0;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(
+    180deg,
+    rgb(0, 183, 255),
+    rgb(255, 48, 255)
+  );
+  height: 330%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  background: #0b3873;
+  inset: 5px;
+  border-radius: 15px;
+}
+.inputDark {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border: none;
+}
+/* _checkbox */
+label {
+  position: relative;
+  top: 40px;
+  color: rgb(133, 133, 133);
+}
+.checkmark {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #ccc;
+  border-radius: 100%;
+  background: #e8e8e8;
+  box-shadow: 3px 3px 5px #c5c5c5, -3px -3px 5px #ffffff;
+  transition-duration: 0.5s;
+  margin-right: 10px;
+}
+
+.container input:checked ~ .checkmark {
+  box-shadow: inset 3px 3px 5px #c5c5c5, inset -3px -3px 5px #ffffff;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+}
+
+.container input:checked ~ .checkmark:after {
+  opacity: 1;
+}
+
+.container .checkmark:after {
+  left: 0.53em;
+  top: 0.28em;
+  width: 0.27em;
+  height: 0.55em;
+  border: solid darkgray;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
