@@ -14,3 +14,4 @@ The code defines an Angular component called "EventsComponent" with the followin
 The component also declares and initializes various properties such as phrases, name, start, isRed, progressIncreasePerClick, clickCount, acceleratorCount, acceleratorCost, divs, intervalId, progressBarMaxValue, progressBar, isProgressBarFull, timer, isDarkMode, and clickSound, levelUpSound, ower, and perfekt audio elements.
 ![Clicker The Game](clickStart.png)
 ![New Game User The Wine](clickWine.png)
+for cooperation, write to me by mail tromp1000@gmail.com
