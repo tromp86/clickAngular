@@ -12,4 +12,5 @@ The code defines an Angular component called "EventsComponent" with the followin
 9. getButtonClass(): Returns the CSS class for the button based on the progress bar status.
 10. startGame(): Resets the game state and starts a new game.
 The component also declares and initializes various properties such as phrases, name, start, isRed, progressIncreasePerClick, clickCount, acceleratorCount, acceleratorCost, divs, intervalId, progressBarMaxValue, progressBar, isProgressBarFull, timer, isDarkMode, and clickSound, levelUpSound, ower, and perfekt audio elements.
-![timer](timer.png)
+![Clicker The Game](clickStart.png)
+![New Game User The Wine](clickWine.png)
