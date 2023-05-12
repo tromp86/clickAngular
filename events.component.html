@@ -1,0 +1,56 @@
+<p>events works!</p>
+<!-- <label>Введите имя:</label>
+<input [(ngModel)]="name" placeholder="name" />
+<h5>Добро пожаловать {{ name }}!</h5>
+<input type="text" [value]="name" />
+<input [(ngModel)]="name" placeholder="name">
+<p [textContent]="name"></p> -->
+
+<!-- <p>Количество кликов {{ count }}</p>
+<button (click)="increase($event)">Click</button>
+
+<h5>{{ start! }}</h5>
+
+
+<div [class.isredbox]="!isRed"></div>
+<input type="checkbox" [(ngModel)]="isRed" /> -->
+
+<!-- -------------------------- -->
+<div class="inputDark containerButonNot">
+<label class="container" for="darkModeToggle">Dark Mode
+  <input type="checkbox" id="darkModeToggle" [(ngModel)]="isDarkMode" >
+  <div class="checkmark"></div>
+</label>
+</div>
+
+
+<section class="body container-blur" [ngClass]="{ 'blur': isProgressBarFull, 'dark-mode': isDarkMode }">
+  
+  <div class="progress-bar-container">
+    <div class="progress-bar" [style.width.%]="progressBar" [class.full]="isProgressBarFull"></div>
+  </div>
+  <p>{{ isProgressBarFull ? 'Progress Bar is Full' : 'Progress Bar is Not Full' }}</p>
+  
+<div class="container card">
+  <h1>{{ name }}</h1>
+  <div [class.isredsoska]="isRed" [class.fadeIn]="isRed">next {{ acceleratorCount }} level</div>
+  <p>Click Count: </p><h4>{{ clickCount }}</h4>
+</div>
+<h5>{{ start! }}</h5>
+
+<button (click)="incrementClickCount()" [disabled]="isProgressBarFull || acceleratorCount === 7" [ngClass]="{'disabled-button': isProgressBarFull || acceleratorCount === 7}">Click Me</button>
+<button (click)="buyAccelerator()" [disabled]="clickCount < acceleratorCost || isProgressBarFull || acceleratorCount === 7" [ngClass]="{'disabled-button': clickCount < acceleratorCost || isProgressBarFull || acceleratorCount === 7}">
+  Buy Accelerator (Cost: {{ acceleratorCost }})
+</button>
+
+</section>
+<div class="container-wrap">
+<div class="divops" *ngFor="let div of divs">
+  <p>{{ div.phrase }}</p>
+</div>
+</div>
+<div class="containerButonNot">
+  <ng-container [ngSwitch]="isProgressBarFull || acceleratorCount === 7">
+    <button *ngSwitchCase="true" (click)="startGame()">start new game</button>
+  </ng-container>
+</div>
