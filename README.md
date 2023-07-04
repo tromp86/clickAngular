@@ -1,5 +1,5 @@
 Welcome to Clicker Game!
-![Clicker The Game](cava_1.png)
+![Clicker The Game](cava_1.jpg)
 + An addictive and engaging game built with Angular.
 Test your clicking skills and strive for high scores.
 1. Gameplay:
